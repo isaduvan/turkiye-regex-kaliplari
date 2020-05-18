@@ -62,6 +62,14 @@ function birthdayRegEx(val) {
     13 08 1987
     */
 }
+function ibanRegEx(val) {
+    return /^([A-Z]{2})\s*\t*(\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)$/.test(val);
+    /*
+    TR90 1000 1000 1000 1000 1000
+    TR 90 1000 1000 1000 1000 1000
+    TR9010001000100010001000
+    */
+}
 
 /* Button Clicks */
 var clicks = function(button,input,regex){
@@ -82,4 +90,5 @@ window.onload = function(){
     clicks("#btnCreditCardNumber","#txtCreditCardNumber",creditCardRegEx);
     clicks("#btnCarPlate","#txtCarPlate",carPlateRegEx);
     clicks("#btnBirthday","#txtBirthday",birthdayRegEx);
+    clicks("#btnIban","#txtIban",ibanRegEx);
 }

@@ -98,6 +98,19 @@
                     <p class="success"></p>
                 </div>
             </div>
+            <div class="regex-item">
+                <h2>IBAN Numarası</h2>
+                <h3>Kabul edilen formatlar</h3>
+                <p><i>TR90 1000 1000 1000 1000 1000<br>TR 90 1000 1000 1000 1000 1000<br>TR9010001000100010001000</i></p>
+                <h3>Regex</h3>
+                <code>/^([A-Z]{2})\s*\t*(\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)\s*\t*(\d\d\d\d)$/</code>
+                <h3>Örnek</h3>
+                <div class="sample">
+                    <input type="text" value="TR90 1000 1000 1000 1000 1000" id="txtIban">
+                    <input type="button" value="Test" id="btnIban">
+                    <p class="success"></p>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="regex.js"></script>
